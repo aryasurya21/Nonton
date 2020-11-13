@@ -1,0 +1,11 @@
+disabled_rules: # rule identifiers to exclude from running
+- trailing_whitespace
+- vertical_whitespace
+- line_length
+- trailing_newline
+
+included:
+  - Nonton
+
+excluded:
+  - Pods

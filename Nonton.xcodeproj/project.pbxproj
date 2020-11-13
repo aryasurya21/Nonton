@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,9 +13,13 @@
 		A1627F7F255E233900E76BEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1627F7E255E233900E76BEC /* Assets.xcassets */; };
 		A1627F82255E233900E76BEC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1627F81255E233900E76BEC /* Preview Assets.xcassets */; };
 		A1627F85255E233900E76BEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1627F83255E233900E76BEC /* LaunchScreen.storyboard */; };
+		A1627F9D255E26F100E76BEC /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = A1627F9C255E26F100E76BEC /* .swiftlint.yml */; };
+		F5C3160272B8742371B510C5 /* Pods_Nonton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4583DBE98013D5533C4C4C74 /* Pods_Nonton.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3FF48C363AC3CD886484573E /* Pods-Nonton.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nonton.debug.xcconfig"; path = "Target Support Files/Pods-Nonton/Pods-Nonton.debug.xcconfig"; sourceTree = "<group>"; };
+		4583DBE98013D5533C4C4C74 /* Pods_Nonton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nonton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1627F75255E233900E76BEC /* Nonton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nonton.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1627F78255E233900E76BEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A1627F7A255E233900E76BEC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +28,8 @@
 		A1627F81255E233900E76BEC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A1627F84255E233900E76BEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A1627F86255E233900E76BEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A1627F9C255E26F100E76BEC /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		E88B9731B4DD75410CE7C47A /* Pods-Nonton.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nonton.release.xcconfig"; path = "Target Support Files/Pods-Nonton/Pods-Nonton.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +37,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5C3160272B8742371B510C5 /* Pods_Nonton.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		67BD0888D89A004729646D50 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4583DBE98013D5533C4C4C74 /* Pods_Nonton.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7D0794C0528058F974643A3D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3FF48C363AC3CD886484573E /* Pods-Nonton.debug.xcconfig */,
+				E88B9731B4DD75410CE7C47A /* Pods-Nonton.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		A1627F6C255E233900E76BEC = {
 			isa = PBXGroup;
 			children = (
+				A1627F9C255E26F100E76BEC /* .swiftlint.yml */,
 				A1627F77255E233900E76BEC /* Nonton */,
 				A1627F76255E233900E76BEC /* Products */,
+				7D0794C0528058F974643A3D /* Pods */,
+				67BD0888D89A004729646D50 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,12 +83,10 @@
 		A1627F77255E233900E76BEC /* Nonton */ = {
 			isa = PBXGroup;
 			children = (
-				A1627F78255E233900E76BEC /* AppDelegate.swift */,
-				A1627F7A255E233900E76BEC /* SceneDelegate.swift */,
-				A1627F7C255E233900E76BEC /* ContentView.swift */,
-				A1627F7E255E233900E76BEC /* Assets.xcassets */,
-				A1627F83255E233900E76BEC /* LaunchScreen.storyboard */,
-				A1627F86255E233900E76BEC /* Info.plist */,
+				A1627FA6255E2C0C00E76BEC /* Supporting Files */,
+				A1627FA5255E2C0300E76BEC /* Module */,
+				A1627FA4255E2BFE00E76BEC /* Core */,
+				A1627FA3255E2BC000E76BEC /* App */,
 				A1627F80255E233900E76BEC /* Preview Content */,
 			);
 			path = Nonton;
@@ -75,6 +100,40 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		A1627FA3255E2BC000E76BEC /* App */ = {
+			isa = PBXGroup;
+			children = (
+				A1627F7C255E233900E76BEC /* ContentView.swift */,
+				A1627F78255E233900E76BEC /* AppDelegate.swift */,
+				A1627F7A255E233900E76BEC /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		A1627FA4255E2BFE00E76BEC /* Core */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		A1627FA5255E2C0300E76BEC /* Module */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		A1627FA6255E2C0C00E76BEC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A1627F7E255E233900E76BEC /* Assets.xcassets */,
+				A1627F83255E233900E76BEC /* LaunchScreen.storyboard */,
+				A1627F86255E233900E76BEC /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -82,9 +141,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A1627F89255E233900E76BEC /* Build configuration list for PBXNativeTarget "Nonton" */;
 			buildPhases = (
+				9E5E7567C2F83F640CBFA351 /* [CP] Check Pods Manifest.lock */,
 				A1627F71255E233900E76BEC /* Sources */,
 				A1627F72255E233900E76BEC /* Frameworks */,
 				A1627F73255E233900E76BEC /* Resources */,
+				1F4B61D5D5D4C2FD3509DB19 /* [CP] Embed Pods Frameworks */,
+				A1627F93255E24BD00E76BEC /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -132,6 +194,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1627F9D255E26F100E76BEC /* .swiftlint.yml in Resources */,
 				A1627F85255E233900E76BEC /* LaunchScreen.storyboard in Resources */,
 				A1627F82255E233900E76BEC /* Preview Assets.xcassets in Resources */,
 				A1627F7F255E233900E76BEC /* Assets.xcassets in Resources */,
@@ -139,6 +202,65 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1F4B61D5D5D4C2FD3509DB19 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Nonton/Pods-Nonton-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Nonton/Pods-Nonton-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Nonton/Pods-Nonton-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9E5E7567C2F83F640CBFA351 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Nonton-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A1627F93255E24BD00E76BEC /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then \n    swiftlint \nelse \n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\" \nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A1627F71255E233900E76BEC /* Sources */ = {
@@ -283,6 +405,7 @@
 		};
 		A1627F8A255E233900E76BEC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3FF48C363AC3CD886484573E /* Pods-Nonton.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -290,7 +413,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Nonton/Preview Content\"";
 				DEVELOPMENT_TEAM = 5RREGEMU45;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = Nonton/Info.plist;
+				INFOPLIST_FILE = "Nonton/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,6 +427,7 @@
 		};
 		A1627F8B255E233900E76BEC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E88B9731B4DD75410CE7C47A /* Pods-Nonton.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -311,7 +435,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Nonton/Preview Content\"";
 				DEVELOPMENT_TEAM = 5RREGEMU45;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = Nonton/Info.plist;
+				INFOPLIST_FILE = "Nonton/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
