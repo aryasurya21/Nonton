@@ -7,7 +7,6 @@ target 'Nonton' do
 
   # Pods for Nonton
   pod 'Alamofire'
-  pod 'RxSwift'
   pod 'SwiftLint'
-  pod 'Realm'
+  pod 'RealmSwift'
 end
