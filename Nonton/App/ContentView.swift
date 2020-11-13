@@ -8,9 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var homePresenter: HomePresenter
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        TabView {
+            HomeView(presenter: homePresenter)
+                .tabItem {
+                    VStack {
+                        Image(systemName: "house")
+                        Text("Home")
+                    }
+                }.tag(0)
+        }
     }
 }
 

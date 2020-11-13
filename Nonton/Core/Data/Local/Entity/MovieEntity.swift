@@ -21,7 +21,4 @@ class MovieEntity: Object {
     @objc dynamic var runtime: Int = 0
     @objc dynamic var movieCategory: String = ""
     
-    override static func primaryKey() -> String {
-        return "id"
-    }
 }

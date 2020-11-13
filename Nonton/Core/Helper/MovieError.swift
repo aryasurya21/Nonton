@@ -24,7 +24,7 @@ enum MovieError: Error, CustomNSError {
         }
     }
     
-    var errorUserInfo: [String : Any] {
+    var errorUserInfo : [String:Any] {
         return [NSLocalizedDescriptionKey: self.localizedDescription]
     }
 }
@@ -35,7 +35,7 @@ enum DatabaseError: Error, CustomNSError {
   case invalidInstance
   case requestFailed
   
-  var localizedDescription: String? {
+  var localizedDescription: String {
     switch self {
     case .invalidInstance: return "Database can't instance."
     case .requestFailed: return "Your request failed."

@@ -8,8 +8,15 @@
 import Foundation
 import Combine
 
-class HomeInteractor: HomeUseCase {
-    func getMovieList(from endpoint: MovieEndPoints) -> AnyPublisher<MovieResponseWrapper, Error> {
-        <#code#>
+class HomeInteractor: HomeUseCaseProtocol {
+
+    private let repository: MovieRepositoryProtocol
+    
+    init(repository: MovieRepositoryProtocol) {
+        self.repository = repository
+    }
+    
+    func getMovieList(from endpoint: MovieEndPoints) -> AnyPublisher<[MovieModel], Error> {
+        self.repository.getMovieList(from: endpoint)
     }
 }

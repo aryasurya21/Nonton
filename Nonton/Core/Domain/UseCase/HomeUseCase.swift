@@ -8,13 +8,6 @@
 import Foundation
 import Combine
 
-enum MovieEndPoints: String {
-    case popular
-    case nowPlaying = "now_playing"
-    case upcoming
-    case topRated = "top_rated"
-}
-
-protocol HomeUseCase {
-    func getMovieList(from endpoint: MovieEndPoints) -> AnyPublisher<MovieResponseWrapper, Error>
+protocol HomeUseCaseProtocol {
+    func getMovieList(from endpoint: MovieEndPoints) -> AnyPublisher<[MovieModel], Error>
 }

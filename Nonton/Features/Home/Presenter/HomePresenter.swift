@@ -10,4 +10,51 @@ import Combine
 
 class HomePresenter: ObservableObject {
     
+    private let useCase: HomeUseCaseProtocol
+    private var cancellables: Set<AnyCancellable> = []
+    
+    @Published var upcomingMovies: [MovieModel]?
+    @Published var nowPlayingMovies: [MovieModel]?
+    @Published var topRatedMovies: [MovieModel]?
+    @Published var popularMovies: [MovieModel]?
+    @Published var isLoading = false
+    @Published var error: Error?
+    
+    init(useCase: HomeUseCaseProtocol) {
+        self.useCase = useCase
+    }
+    
+    func getMovies(for endpoint: MovieEndPoints) {
+        self.resetMovieList()
+        self.isLoading = true
+        self.useCase.getMovieList(from: endpoint)
+            .receive(on: RunLoop.main)
+            .sink { (completion) in
+                switch completion {
+                case .failure(let error):
+                    self.error = error
+                    self.isLoading = false
+                case .finished:
+                    self.isLoading = false
+                }
+            } receiveValue: { (movies) in
+                switch endpoint {
+                case .nowPlaying:
+                    self.nowPlayingMovies =  movies
+                case .popular:
+                    self.popularMovies = movies
+                case .topRated:
+                    self.topRatedMovies = movies
+                case .upcoming:
+                    self.upcomingMovies = movies
+                }
+            }.store(in: &self.cancellables)
+    }
+    
+    private func resetMovieList(){
+        self.nowPlayingMovies =  nil
+        self.popularMovies = nil
+        self.topRatedMovies = nil
+        self.upcomingMovies = nil
+    }
 }

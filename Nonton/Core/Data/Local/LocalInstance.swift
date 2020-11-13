@@ -17,7 +17,6 @@ protocol LocalInstanceCapabilityProtocol {
 class LocalInstance {
     
     private let realm: Realm?
-    
     private init(realm: Realm?){
         self.realm = realm
     }
@@ -29,7 +28,7 @@ class LocalInstance {
 
 extension LocalInstance: LocalInstanceCapabilityProtocol {
     func getMovieList(from endpoint: MovieEndPoints) -> AnyPublisher<[MovieEntity], Error> {
-        return Future<[MovieEntity], Error>{ (completion) in
+        return Future<[MovieEntity], Error> { (completion) in
             if let realm = self.realm {
                 let movies: Results<MovieEntity> = {
                     realm.objects(MovieEntity.self)

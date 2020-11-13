@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A10FD702255EDA6A0066FA52 /* MovieEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10FD701255EDA6A0066FA52 /* MovieEnum.swift */; };
+		A10FD705255EDC0A0066FA52 /* Injector.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10FD704255EDC0A0066FA52 /* Injector.swift */; };
+		A10FD708255EDE840066FA52 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10FD707255EDE840066FA52 /* HomeView.swift */; };
 		A1627F79255E233900E76BEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1627F78255E233900E76BEC /* AppDelegate.swift */; };
 		A1627F7B255E233900E76BEC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1627F7A255E233900E76BEC /* SceneDelegate.swift */; };
 		A1627F7D255E233900E76BEC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1627F7C255E233900E76BEC /* ContentView.swift */; };
@@ -32,6 +35,9 @@
 /* Begin PBXFileReference section */
 		3FF48C363AC3CD886484573E /* Pods-Nonton.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nonton.debug.xcconfig"; path = "Target Support Files/Pods-Nonton/Pods-Nonton.debug.xcconfig"; sourceTree = "<group>"; };
 		4583DBE98013D5533C4C4C74 /* Pods_Nonton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nonton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A10FD701255EDA6A0066FA52 /* MovieEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieEnum.swift; sourceTree = "<group>"; };
+		A10FD704255EDC0A0066FA52 /* Injector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injector.swift; sourceTree = "<group>"; };
+		A10FD707255EDE840066FA52 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		A1627F75255E233900E76BEC /* Nonton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nonton.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1627F78255E233900E76BEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A1627F7A255E233900E76BEC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -169,6 +175,7 @@
 		A1627FBD255E2F2200E76BEC /* DI */ = {
 			isa = PBXGroup;
 			children = (
+				A10FD704255EDC0A0066FA52 /* Injector.swift */,
 			);
 			path = DI;
 			sourceTree = "<group>";
@@ -208,6 +215,7 @@
 		A1627FCC255E417400E76BEC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A10FD707255EDE840066FA52 /* HomeView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -310,6 +318,7 @@
 			children = (
 				A162802C255E4B6C00E76BEC /* MovieError.swift */,
 				A1628037255E6FC100E76BEC /* MovieMapper.swift */,
+				A10FD701255EDA6A0066FA52 /* MovieEnum.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -456,12 +465,15 @@
 				A1627FDA255E421C00E76BEC /* HomeUseCase.swift in Sources */,
 				A1627F79255E233900E76BEC /* AppDelegate.swift in Sources */,
 				A1627FEF255E479B00E76BEC /* LocalInstance.swift in Sources */,
+				A10FD708255EDE840066FA52 /* HomeView.swift in Sources */,
 				A1628033255E64FF00E76BEC /* MovieEntity.swift in Sources */,
+				A10FD705255EDC0A0066FA52 /* Injector.swift in Sources */,
 				A1628038255E6FC100E76BEC /* MovieMapper.swift in Sources */,
 				A1627F7B255E233900E76BEC /* SceneDelegate.swift in Sources */,
 				A1627F7D255E233900E76BEC /* ContentView.swift in Sources */,
 				A1627FD5255E41FC00E76BEC /* HomeInteractor.swift in Sources */,
 				A1627FCF255E419300E76BEC /* HomePresenter.swift in Sources */,
+				A10FD702255EDA6A0066FA52 /* MovieEnum.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

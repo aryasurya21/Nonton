@@ -22,10 +22,13 @@ class APIInstance {
 
 extension APIInstance: APICapabilityProtocol {
     
-    func getMovieList(from endpoint: MovieEndPoints) -> AnyPublisher<[MovieResponse], Error>{
+    func getMovieList(from endpoint: MovieEndPoints) -> AnyPublisher<[MovieResponse], Error> {
+        let parameters: Parameters = [
+            "api_key": self.apiKey
+        ]
         return Future<[MovieResponse], Error> { (completion) in
             if let url = URL(string: "\(self.baseURL)/movie/\(endpoint.rawValue)") {
-                AF.request(url).validate().responseDecodable(of: MovieResponseWrapper.self) { (response) in
+                AF.request(url, method: .get, parameters: parameters).validate().responseDecodable(of: MovieResponseWrapper.self) { (response) in
                     switch response.result {
                     case .success(let data):
                         completion(.success(data.results))

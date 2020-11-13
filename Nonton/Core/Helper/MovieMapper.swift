@@ -9,7 +9,7 @@ import Foundation
 
 class MovieMapper {
     class func mapMovieResponseToEntity(from endpoint: MovieEndPoints, movies: [MovieResponse]) -> [MovieEntity] {
-        return movies.map{ movie in
+        return movies.map { movie in
             let entity = MovieEntity()
             entity.id = movie.id
             entity.title = movie.title
@@ -25,7 +25,7 @@ class MovieMapper {
     }
     
     class func mapMovieEntityToModel(from endpoint: MovieEndPoints, movies: [MovieEntity]) -> [MovieModel] {
-        return movies.map{ movie in
+        return movies.map { movie in
             return MovieModel(
                 id: movie.id,
                 title: movie.title,

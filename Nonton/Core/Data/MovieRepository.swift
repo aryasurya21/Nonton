@@ -30,19 +30,19 @@ class MovieRepository {
 extension MovieRepository: MovieRepositoryProtocol {
     func getMovieList(from endpoint: MovieEndPoints) -> AnyPublisher<[MovieModel], Error> {
         return self.localInstance.getMovieList(from: endpoint)
-            .flatMap{ result -> AnyPublisher<[MovieModel], Error> in
+            .flatMap { result -> AnyPublisher<[MovieModel], Error> in
             if result.isEmpty {
                 return self.apiInstance.getMovieList(from: endpoint)
-                    .map{ MovieMapper.mapMovieResponseToEntity(from: endpoint, movies: $0) }
-                    .catch{ _ in self.localInstance.getMovieList(from: endpoint) }
-                    .flatMap{ self.localInstance.addMovieList(movies: $0) }
-                    .filter{ $0 }
-                    .flatMap{ _ in self.localInstance.getMovieList(from: endpoint)
-                        .map{ MovieMapper.mapMovieEntityToModel(from: endpoint, movies: $0) }
+                    .map { MovieMapper.mapMovieResponseToEntity(from: endpoint, movies: $0) }
+                    .catch { _ in self.localInstance.getMovieList(from: endpoint) }
+                    .flatMap { self.localInstance.addMovieList(movies: $0) }
+                    .filter { $0 }
+                    .flatMap { _ in self.localInstance.getMovieList(from: endpoint)
+                        .map { MovieMapper.mapMovieEntityToModel(from: endpoint, movies: $0) }
                     }.eraseToAnyPublisher()
             } else {
                 return self.localInstance.getMovieList(from: endpoint)
-                    .map{ MovieMapper.mapMovieEntityToModel(from: endpoint, movies: $0) }
+                    .map { MovieMapper.mapMovieEntityToModel(from: endpoint, movies: $0) }
                     .eraseToAnyPublisher()
             }
         }.eraseToAnyPublisher()
