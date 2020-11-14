@@ -9,4 +9,5 @@ target 'Nonton' do
   pod 'Alamofire'
   pod 'SwiftLint'
   pod 'RealmSwift'
+  pod 'SDWebImageSwiftUI'
 end

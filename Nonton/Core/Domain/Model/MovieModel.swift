@@ -17,4 +17,12 @@ struct MovieModel: Equatable, Identifiable {
     let voteCount: Int
     let runtime: Int
     let movieCategory: String
+    
+    var posterImageURL: URL {
+        return URL(string: "https://image.tmdb.org/t/p/w500/\(self.posterPath)")!
+    }
+    
+    var backdropURL: URL {
+        return URL(string: "https://image.tmdb.org/t/p/w500/\(self.backdropPath)")!
+    }
 }

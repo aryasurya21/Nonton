@@ -51,7 +51,7 @@ class HomePresenter: ObservableObject {
             }.store(in: &self.cancellables)
     }
     
-    private func resetMovieList(){
+    private func resetMovieList() {
         self.nowPlayingMovies =  nil
         self.popularMovies = nil
         self.topRatedMovies = nil

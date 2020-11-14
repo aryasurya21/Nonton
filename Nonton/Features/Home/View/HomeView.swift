@@ -14,13 +14,47 @@ struct HomeView: View {
     var body: some View {
         NavigationView {
             List {
-                
+                Group {
+                    if self.presenter.nowPlayingMovies != nil {
+                        MoviePosterList(movies: self.presenter.nowPlayingMovies!, title: "Now Playing")
+                    }
+                }.listRowInsets(EdgeInsets(top: 16, leading: 0, bottom: 16, trailing: 0))
+                Group {
+                    if self.presenter.upcomingMovies != nil {
+                        MovieBackdropList(title: "Upcoming", movies: self.presenter.upcomingMovies!)
+                    }
+                }.listRowInsets(EdgeInsets(top: 16, leading: 0, bottom: 16, trailing: 0))
+                Group {
+                    if self.presenter.topRatedMovies != nil {
+                        MovieBackdropList(title: "Top Rated", movies: self.presenter.topRatedMovies!)
+                    }
+                }.listRowInsets(EdgeInsets(top: 16, leading: 0, bottom: 16, trailing: 0))
+                Group {
+                    if self.presenter.popularMovies != nil {
+                        MoviePosterList(movies: self.presenter.popularMovies!, title: "Popular")
+                    }
+                }.listRowInsets(EdgeInsets(top: 16, leading: 0, bottom: 16, trailing: 0))
             }.navigationBarTitle("Nonton Yuk!")
         }.onAppear(perform: {
+            
+            if self.presenter.nowPlayingMovies == nil {
             self.presenter.getMovies(for: .nowPlaying)
+            }
+            if self.presenter.popularMovies == nil {
             self.presenter.getMovies(for: .popular)
+            }
+            if self.presenter.topRatedMovies == nil {
             self.presenter.getMovies(for: .topRated)
+            }
+            if self.presenter.upcomingMovies == nil {
             self.presenter.getMovies(for: .upcoming)
+            }
         })
+    }
+}
+
+struct Home_Previews: PreviewProvider {
+    static var previews: some View {
+        HomeView(presenter: HomePresenter(useCase: Injector.shared.injectHomeInteractor()))
     }
 }

@@ -11,14 +11,13 @@ class MovieMapper {
     class func mapMovieResponseToEntity(from endpoint: MovieEndPoints, movies: [MovieResponse]) -> [MovieEntity] {
         return movies.map { movie in
             let entity = MovieEntity()
-            entity.id = movie.id
-            entity.title = movie.title
+            entity.id = movie.id ?? 0
+            entity.title = movie.title ?? ""
             entity.backdropPath = movie.backdropPath ?? ""
             entity.posterPath = movie.posterPath ?? ""
             entity.overview = movie.overview ?? ""
             entity.voteAverage = movie.voteAverage ?? 0.0
             entity.voteCount = movie.voteCount ?? 0
-            entity.runtime = movie.runtime ?? 0
             entity.movieCategory = endpoint.rawValue
             return entity
         }
