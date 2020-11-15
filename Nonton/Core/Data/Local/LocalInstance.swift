@@ -12,21 +12,60 @@ import RealmSwift
 protocol LocalInstanceCapabilityProtocol {
     func getMovieList(from endpoint: MovieEndPoints) -> AnyPublisher<[MovieEntity], Error>
     func addMovieList(movies: [MovieEntity]) -> AnyPublisher<Bool, Error>
+    func getMovieDetail(withID movieID: Int) -> AnyPublisher<MovieEntity, Error>
+    func updateMovie(withID movieID: Int, newMovieData sourceMovie: MovieEntity) -> AnyPublisher<Bool, Error>
 }
 
 class LocalInstance {
-    
+
     private let realm: Realm?
-    private init(realm: Realm?){
+    private init(realm: Realm?) {
         self.realm = realm
     }
-    
+
     static let shared: (Realm?) -> LocalInstance = { realm in
         return LocalInstance(realm: realm)
     }
 }
 
 extension LocalInstance: LocalInstanceCapabilityProtocol {
+    func updateMovie(withID movieID: Int, newMovieData sourceMovie: MovieEntity) -> AnyPublisher<Bool, Error> {
+        return Future<Bool, Error> { (completion) in
+            guard let realm = self.realm, let targetMovie = realm.objects(MovieEntity.self).filter("id=\(movieID)").first else {
+                return completion(.failure(DatabaseError.invalidInstance))
+            }
+            do {
+                try realm.write {
+                    targetMovie.setValue(sourceMovie.title, forKey: "title")
+                    targetMovie.setValue(sourceMovie.overview, forKey: "overview")
+                    targetMovie.setValue(sourceMovie.posterPath, forKey: "posterPath")
+                    targetMovie.setValue(sourceMovie.backdropPath, forKey: "backdropPath")
+                    targetMovie.setValue(sourceMovie.voteAverage, forKey: "voteAverage")
+                    targetMovie.setValue(sourceMovie.runtime, forKeyPath: "runtime")
+                    targetMovie.setValue(sourceMovie.movieCategory, forKey: "movieCategory")
+                    targetMovie.setValue(sourceMovie.releaseDate, forKey: "releaseDate")
+                }
+                completion(.success(true))
+            } catch {
+                return completion(.failure(DatabaseError.requestFailed))
+            }
+        }.eraseToAnyPublisher()
+    }
+
+    func getMovieDetail(withID movieID: Int) -> AnyPublisher<MovieEntity, Error> {
+        return Future<MovieEntity, Error> { (completion) in
+            if let realm = self.realm {
+                let meals  = realm.objects(MovieEntity.self)
+                    .filter("id=\(movieID)")
+
+                guard let targetMeal = meals.first else { return completion(.failure(DatabaseError.requestFailed))}
+                completion(.success(targetMeal))
+            } else {
+                completion(.failure(DatabaseError.invalidInstance))
+            }
+        }.eraseToAnyPublisher()
+    }
+
     func getMovieList(from endpoint: MovieEndPoints) -> AnyPublisher<[MovieEntity], Error> {
         return Future<[MovieEntity], Error> { (completion) in
             if let realm = self.realm {
@@ -41,9 +80,9 @@ extension LocalInstance: LocalInstanceCapabilityProtocol {
             }
         }.eraseToAnyPublisher()
     }
-    
+
     func addMovieList(movies: [MovieEntity]) -> AnyPublisher<Bool, Error> {
-        return Future<Bool, Error>{ (completion) in
+        return Future<Bool, Error> { (completion) in
             if let realm = self.realm {
                 do {
                     try realm.write {

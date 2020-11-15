@@ -10,33 +10,33 @@ import SwiftUI
 
 struct HomeView: View {
     @ObservedObject var presenter: HomePresenter
-    
+
     var body: some View {
         NavigationView {
             List {
                 Group {
                     if self.presenter.nowPlayingMovies != nil {
-                        MoviePosterList(movies: self.presenter.nowPlayingMovies!, title: "Now Playing")
+                        MoviePosterList(movies: self.presenter.nowPlayingMovies!, title: "Now Playing", presenter: self.presenter)
                     }
                 }.listRowInsets(EdgeInsets(top: 16, leading: 0, bottom: 16, trailing: 0))
                 Group {
                     if self.presenter.upcomingMovies != nil {
-                        MovieBackdropList(title: "Upcoming", movies: self.presenter.upcomingMovies!)
-                    }
+                        MovieBackdropList(title: "Upcoming", movies: self.presenter.upcomingMovies!, presenter: self.presenter)                   }
                 }.listRowInsets(EdgeInsets(top: 16, leading: 0, bottom: 16, trailing: 0))
                 Group {
                     if self.presenter.topRatedMovies != nil {
-                        MovieBackdropList(title: "Top Rated", movies: self.presenter.topRatedMovies!)
+                        MovieBackdropList(title: "Top Rated", movies: self.presenter.topRatedMovies!, presenter: self.presenter)
                     }
                 }.listRowInsets(EdgeInsets(top: 16, leading: 0, bottom: 16, trailing: 0))
                 Group {
                     if self.presenter.popularMovies != nil {
-                        MoviePosterList(movies: self.presenter.popularMovies!, title: "Popular")
+                        MoviePosterList(movies: self.presenter.popularMovies!, title: "Popular", presenter: self.presenter)
                     }
                 }.listRowInsets(EdgeInsets(top: 16, leading: 0, bottom: 16, trailing: 0))
             }.navigationBarTitle("Nonton Yuk!")
+
         }.onAppear(perform: {
-            
+
             if self.presenter.nowPlayingMovies == nil {
             self.presenter.getMovies(for: .nowPlaying)
             }

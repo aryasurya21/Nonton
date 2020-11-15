@@ -7,23 +7,24 @@
 
 import Foundation
 import Combine
+import SwiftUI
 
 class HomePresenter: ObservableObject {
-    
+
     private let useCase: HomeUseCaseProtocol
     private var cancellables: Set<AnyCancellable> = []
-    
+    private let router = HomeRouter()
     @Published var upcomingMovies: [MovieModel]?
     @Published var nowPlayingMovies: [MovieModel]?
     @Published var topRatedMovies: [MovieModel]?
     @Published var popularMovies: [MovieModel]?
     @Published var isLoading = false
     @Published var error: Error?
-    
+
     init(useCase: HomeUseCaseProtocol) {
         self.useCase = useCase
     }
-    
+
     func getMovies(for endpoint: MovieEndPoints) {
         self.resetMovieList()
         self.isLoading = true
@@ -50,11 +51,17 @@ class HomePresenter: ObservableObject {
                 }
             }.store(in: &self.cancellables)
     }
-    
+
     private func resetMovieList() {
         self.nowPlayingMovies =  nil
         self.popularMovies = nil
         self.topRatedMovies = nil
         self.upcomingMovies = nil
+    }
+
+    func viewBuilder<Content: View>(movieData: MovieModel, @ViewBuilder content: () -> Content) -> some View {
+        return NavigationLink(destination: router.goToDetailView(for: movieData)) {
+            content()
+        }
     }
 }

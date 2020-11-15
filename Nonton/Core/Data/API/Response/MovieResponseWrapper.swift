@@ -18,8 +18,9 @@ struct MovieResponse: Decodable {
     let posterPath: String?
     let overview: String?
     let voteAverage: Double?
-    let voteCount: Int?
-    
+    let runTime: Int?
+    let releaseDate: String?
+
     enum CodingKeys: String, CodingKey {
         case id
         case title
@@ -27,9 +28,10 @@ struct MovieResponse: Decodable {
         case posterPath = "poster_path"
         case overview
         case voteAverage = "vote_average"
-        case voteCount = "vote_count"
+        case runTime = "runtime"
+        case releaseDate = "release_date"
     }
-    
+
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         self.id = try values.decodeIfPresent(Int.self, forKey: .id)
@@ -38,6 +40,7 @@ struct MovieResponse: Decodable {
         self.posterPath = try values.decodeIfPresent(String.self, forKey: .posterPath)
         self.overview = try values.decodeIfPresent(String.self, forKey: .overview)
         self.voteAverage = try values.decodeIfPresent(Double.self, forKey: .voteAverage)
-        self.voteCount = try values.decodeIfPresent(Int.self, forKey: .voteCount)
+        self.runTime = try values.decodeIfPresent(Int.self, forKey: .runTime)
+        self.releaseDate = try values.decodeIfPresent(String.self, forKey: .releaseDate)
     }
 }

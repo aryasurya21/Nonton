@@ -11,11 +11,11 @@ import Combine
 class HomeInteractor: HomeUseCaseProtocol {
 
     private let repository: MovieRepositoryProtocol
-    
+
     init(repository: MovieRepositoryProtocol) {
         self.repository = repository
     }
-    
+
     func getMovieList(from endpoint: MovieEndPoints) -> AnyPublisher<[MovieModel], Error> {
         self.repository.getMovieList(from: endpoint)
     }

@@ -7,9 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A10D6DBE25613E7300773467 /* MovieBackdropList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10D6DBD25613E7300773467 /* MovieBackdropList.swift */; };
+		A10D6DC4256140E500773467 /* MoviePosterList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10D6DC3256140E500773467 /* MoviePosterList.swift */; };
 		A10FD702255EDA6A0066FA52 /* MovieEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10FD701255EDA6A0066FA52 /* MovieEnum.swift */; };
 		A10FD705255EDC0A0066FA52 /* Injector.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10FD704255EDC0A0066FA52 /* Injector.swift */; };
 		A10FD708255EDE840066FA52 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10FD707255EDE840066FA52 /* HomeView.swift */; };
+		A145173B2561331300D9DD77 /* DetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A145173A2561331300D9DD77 /* DetailInteractor.swift */; };
+		A14517452561332600D9DD77 /* DetailUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14517442561332600D9DD77 /* DetailUseCase.swift */; };
+		A14517482561342400D9DD77 /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14517472561342400D9DD77 /* DetailPresenter.swift */; };
 		A1627F79255E233900E76BEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1627F78255E233900E76BEC /* AppDelegate.swift */; };
 		A1627F7B255E233900E76BEC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1627F7A255E233900E76BEC /* SceneDelegate.swift */; };
 		A1627F7D255E233900E76BEC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1627F7C255E233900E76BEC /* ContentView.swift */; };
@@ -29,19 +34,24 @@
 		A1628033255E64FF00E76BEC /* MovieEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1628032255E64FF00E76BEC /* MovieEntity.swift */; };
 		A1628038255E6FC100E76BEC /* MovieMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1628037255E6FC100E76BEC /* MovieMapper.swift */; };
 		A1628044255E875600E76BEC /* Results+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1628043255E875600E76BEC /* Results+Extension.swift */; };
-		A18B5A5C2560166A005C4E61 /* MoviePosterList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18B5A5B2560166A005C4E61 /* MoviePosterList.swift */; };
 		A18B5A6625601B74005C4E61 /* MovieBackdrop.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18B5A6525601B74005C4E61 /* MovieBackdrop.swift */; };
-		A18B5A6A25601B89005C4E61 /* MovieBackdropList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18B5A6925601B89005C4E61 /* MovieBackdropList.swift */; };
 		A1B261E5255FD10E0085117B /* MoviePoster.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B261E4255FD10E0085117B /* MoviePoster.swift */; };
+		A1C0B0B32560F74F006C2267 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C0B0B22560F74F006C2267 /* HomeRouter.swift */; };
+		A1C0B0C02560F7B5006C2267 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C0B0BF2560F7B5006C2267 /* DetailView.swift */; };
 		F5C3160272B8742371B510C5 /* Pods_Nonton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4583DBE98013D5533C4C4C74 /* Pods_Nonton.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3FF48C363AC3CD886484573E /* Pods-Nonton.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nonton.debug.xcconfig"; path = "Target Support Files/Pods-Nonton/Pods-Nonton.debug.xcconfig"; sourceTree = "<group>"; };
 		4583DBE98013D5533C4C4C74 /* Pods_Nonton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nonton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A10D6DBD25613E7300773467 /* MovieBackdropList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieBackdropList.swift; sourceTree = "<group>"; };
+		A10D6DC3256140E500773467 /* MoviePosterList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviePosterList.swift; sourceTree = "<group>"; };
 		A10FD701255EDA6A0066FA52 /* MovieEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieEnum.swift; sourceTree = "<group>"; };
 		A10FD704255EDC0A0066FA52 /* Injector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injector.swift; sourceTree = "<group>"; };
 		A10FD707255EDE840066FA52 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		A145173A2561331300D9DD77 /* DetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInteractor.swift; sourceTree = "<group>"; };
+		A14517442561332600D9DD77 /* DetailUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailUseCase.swift; sourceTree = "<group>"; };
+		A14517472561342400D9DD77 /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
 		A1627F75255E233900E76BEC /* Nonton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nonton.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1627F78255E233900E76BEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A1627F7A255E233900E76BEC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,10 +73,10 @@
 		A1628032255E64FF00E76BEC /* MovieEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieEntity.swift; sourceTree = "<group>"; };
 		A1628037255E6FC100E76BEC /* MovieMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieMapper.swift; sourceTree = "<group>"; };
 		A1628043255E875600E76BEC /* Results+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Results+Extension.swift"; sourceTree = "<group>"; };
-		A18B5A5B2560166A005C4E61 /* MoviePosterList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviePosterList.swift; sourceTree = "<group>"; };
 		A18B5A6525601B74005C4E61 /* MovieBackdrop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieBackdrop.swift; sourceTree = "<group>"; };
-		A18B5A6925601B89005C4E61 /* MovieBackdropList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieBackdropList.swift; sourceTree = "<group>"; };
 		A1B261E4255FD10E0085117B /* MoviePoster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviePoster.swift; sourceTree = "<group>"; };
+		A1C0B0B22560F74F006C2267 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		A1C0B0BF2560F7B5006C2267 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		E88B9731B4DD75410CE7C47A /* Pods-Nonton.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nonton.release.xcconfig"; path = "Target Support Files/Pods-Nonton/Pods-Nonton.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -191,8 +201,8 @@
 		A1627FC7255E413E00E76BEC /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				A1627FCD255E417800E76BEC /* Router */,
 				A1627FCB255E416E00E76BEC /* Presenter */,
+				A1627FCD255E417800E76BEC /* Router */,
 				A1627FCC255E417400E76BEC /* View */,
 			);
 			path = Home;
@@ -208,6 +218,9 @@
 		A1627FCA255E415000E76BEC /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				A1C0B0BD2560F796006C2267 /* Presenter */,
+				A1C0B0BC2560F791006C2267 /* Router */,
+				A1C0B0BE2560F79F006C2267 /* View */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -232,6 +245,7 @@
 		A1627FCD255E417800E76BEC /* Router */ = {
 			isa = PBXGroup;
 			children = (
+				A1C0B0B22560F74F006C2267 /* HomeRouter.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -258,6 +272,7 @@
 			isa = PBXGroup;
 			children = (
 				A1627FD9255E421C00E76BEC /* HomeUseCase.swift */,
+				A14517442561332600D9DD77 /* DetailUseCase.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -266,6 +281,7 @@
 			isa = PBXGroup;
 			children = (
 				A1627FD4255E41FC00E76BEC /* HomeInteractor.swift */,
+				A145173A2561331300D9DD77 /* DetailInteractor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -332,19 +348,19 @@
 			path = Helper;
 			sourceTree = "<group>";
 		};
-		A18B5A6425601B65005C4E61 /* Card */ = {
+		A18B5A6425601B65005C4E61 /* Backdrop */ = {
 			isa = PBXGroup;
 			children = (
 				A18B5A6525601B74005C4E61 /* MovieBackdrop.swift */,
-				A18B5A6925601B89005C4E61 /* MovieBackdropList.swift */,
+				A10D6DBD25613E7300773467 /* MovieBackdropList.swift */,
 			);
-			path = Card;
+			path = Backdrop;
 			sourceTree = "<group>";
 		};
 		A1B261E2255FD0F20085117B /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				A18B5A6425601B65005C4E61 /* Card */,
+				A18B5A6425601B65005C4E61 /* Backdrop */,
 				A1B261E3255FD0F70085117B /* Poster */,
 			);
 			path = Components;
@@ -353,10 +369,33 @@
 		A1B261E3255FD0F70085117B /* Poster */ = {
 			isa = PBXGroup;
 			children = (
+				A10D6DC3256140E500773467 /* MoviePosterList.swift */,
 				A1B261E4255FD10E0085117B /* MoviePoster.swift */,
-				A18B5A5B2560166A005C4E61 /* MoviePosterList.swift */,
 			);
 			path = Poster;
+			sourceTree = "<group>";
+		};
+		A1C0B0BC2560F791006C2267 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		A1C0B0BD2560F796006C2267 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				A14517472561342400D9DD77 /* DetailPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		A1C0B0BE2560F79F006C2267 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A1C0B0BF2560F7B5006C2267 /* DetailView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -493,20 +532,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1627FE2255E443400E76BEC /* MovieRepository.swift in Sources */,
+				A10D6DC4256140E500773467 /* MoviePosterList.swift in Sources */,
+				A145173B2561331300D9DD77 /* DetailInteractor.swift in Sources */,
+				A14517482561342400D9DD77 /* DetailPresenter.swift in Sources */,
+				A1C0B0C02560F7B5006C2267 /* DetailView.swift in Sources */,
 				A162802D255E4B6C00E76BEC /* MovieError.swift in Sources */,
-				A18B5A6A25601B89005C4E61 /* MovieBackdropList.swift in Sources */,
 				A1627FE8255E45EA00E76BEC /* MovieResponseWrapper.swift in Sources */,
 				A1627FDE255E42C000E76BEC /* MovieModel.swift in Sources */,
 				A1628044255E875600E76BEC /* Results+Extension.swift in Sources */,
 				A1627FEC255E478600E76BEC /* APIInstance.swift in Sources */,
 				A1627FDA255E421C00E76BEC /* HomeUseCase.swift in Sources */,
+				A10D6DBE25613E7300773467 /* MovieBackdropList.swift in Sources */,
 				A1627F79255E233900E76BEC /* AppDelegate.swift in Sources */,
 				A1627FEF255E479B00E76BEC /* LocalInstance.swift in Sources */,
 				A10FD708255EDE840066FA52 /* HomeView.swift in Sources */,
+				A1C0B0B32560F74F006C2267 /* HomeRouter.swift in Sources */,
+				A14517452561332600D9DD77 /* DetailUseCase.swift in Sources */,
 				A1628033255E64FF00E76BEC /* MovieEntity.swift in Sources */,
 				A1B261E5255FD10E0085117B /* MoviePoster.swift in Sources */,
 				A10FD705255EDC0A0066FA52 /* Injector.swift in Sources */,
-				A18B5A5C2560166A005C4E61 /* MoviePosterList.swift in Sources */,
 				A1628038255E6FC100E76BEC /* MovieMapper.swift in Sources */,
 				A1627F7B255E233900E76BEC /* SceneDelegate.swift in Sources */,
 				A1627F7D255E233900E76BEC /* ContentView.swift in Sources */,

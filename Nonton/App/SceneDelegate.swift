@@ -14,11 +14,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-      
+
         let homeInteractor = Injector.shared.injectHomeInteractor()
-        
+
         let homePresenter = HomePresenter(useCase: homeInteractor)
-        
+
         let contentView = ContentView()
             .environmentObject(homePresenter)
 
@@ -60,4 +60,3 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
 }
-
