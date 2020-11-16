@@ -10,7 +10,7 @@ import Foundation
 enum MovieError: Error, CustomNSError {
     case apiError
     case invalidEndpoint
-    
+
     var localizedDescription: String {
         switch self {
         case .apiError: return "Failed to fetch data."

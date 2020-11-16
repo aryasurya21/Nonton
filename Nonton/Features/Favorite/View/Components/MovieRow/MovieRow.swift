@@ -10,7 +10,7 @@ import SDWebImageSwiftUI
 
 struct MovieRow: View {
     var movie: MovieModel
-    
+
     var body: some View {
         VStack {
             WebImage(url: movie.backdropURL)

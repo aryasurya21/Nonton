@@ -11,7 +11,7 @@ import SDWebImageSwiftUI
 struct DetailView: View {
     @ObservedObject var presenter: DetailPresenter
     @State private var showPopup = false
-    
+
     var body: some View {
         ScrollView {
             if self.presenter.isLoading {

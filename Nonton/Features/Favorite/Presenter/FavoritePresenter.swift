@@ -10,11 +10,11 @@ import Combine
 import SwiftUI
 
 class FavoritePresenter: ObservableObject {
-    
+
     private let useCase: FavoriteUseCaseProtocol
     private var cancellables: Set<AnyCancellable> = []
     private let router = FavoriteRouter()
-    
+
     @Published var movies: [MovieModel]?
     @Published var error: Error?
     @Published var isLoading = false
@@ -40,7 +40,7 @@ class FavoritePresenter: ObservableObject {
         })
         .store(in: &cancellables)
     }
-    
+
     func viewBuilder<Content: View>(movieData: MovieModel, @ViewBuilder content: () -> Content) -> some View {
         return NavigationLink(destination: router.goToDetailView(for: movieData)) {
             content()

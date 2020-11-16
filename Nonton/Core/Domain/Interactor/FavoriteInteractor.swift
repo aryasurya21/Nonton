@@ -9,13 +9,13 @@ import Foundation
 import Combine
 
 class FavoriteInteractor: FavoriteUseCaseProtocol {
-    
+
     private let repository: MovieRepositoryProtocol
-    
+
     init(repository: MovieRepositoryProtocol) {
         self.repository = repository
     }
-    
+
     func getFavoriteMovies() -> AnyPublisher<[MovieModel], Error> {
         return self.repository.getFavoriteMovies()
     }

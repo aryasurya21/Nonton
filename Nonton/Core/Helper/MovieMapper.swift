@@ -68,9 +68,9 @@ class MovieMapper {
             isFavorite: movie.isFavorite
         )
     }
-    
+
     class func mapMoviesEntitytoModels(movies: [MovieEntity]) -> [MovieModel] {
-        return movies.map{ movie in
+        return movies.map { movie in
             return MovieModel(
                 id: movie.id, title: movie.title,
                 backdropPath: movie.backdropPath,

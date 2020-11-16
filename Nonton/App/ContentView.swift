@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @EnvironmentObject var homePresenter: HomePresenter
     @EnvironmentObject var favoritePresenter: FavoritePresenter
-    
+
     var body: some View {
         TabView {
             HomeView(presenter: self.homePresenter)
@@ -27,11 +27,11 @@ struct ContentView: View {
                     Text("Favorite")
                 }
             }.tag(1)
-            FavoriteView(presenter: self.favoritePresenter)
+            ProfileView()
                 .tabItem {
                 VStack {
-                    Image(systemName: "heart.fill")
-                    Text("Favorite")
+                    Image(systemName: "person.fill")
+                    Text("Profile")
                 }
             }.tag(1)
         }

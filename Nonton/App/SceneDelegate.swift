@@ -17,10 +17,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         let homeInteractor = Injector.shared.injectHomeInteractor()
         let favoriteInteractor = Injector.shared.injectFavoriteInteractor()
-        
+
         let homePresenter = HomePresenter(useCase: homeInteractor)
         let favoritePresenter = FavoritePresenter(useCase: favoriteInteractor)
-        
+
         let contentView = ContentView()
             .environmentObject(homePresenter)
             .environmentObject(favoritePresenter)
@@ -31,6 +31,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             self.window = window
             window.makeKeyAndVisible()
         }
+        let docDirPath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).map(\.path)[0]
+        print("\(docDirPath)")
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

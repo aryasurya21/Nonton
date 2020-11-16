@@ -33,10 +33,10 @@ class MovieRepository {
 extension MovieRepository: MovieRepositoryProtocol {
     func getFavoriteMovies() -> AnyPublisher<[MovieModel], Error> {
         return self.localInstance.getFavoriteMovies()
-            .map{ MovieMapper.mapMoviesEntitytoModels(movies: $0) }
+            .map { MovieMapper.mapMoviesEntitytoModels(movies: $0) }
             .eraseToAnyPublisher()
     }
-    
+
     func toggleFavoriteMovie(forID movieID: Int) -> AnyPublisher<MovieModel, Error> {
         return self.localInstance.toggleFavoriteMovie(withID: movieID)
             .map { MovieMapper.mapMovieDetailEntitytoModel(movie: $0) }

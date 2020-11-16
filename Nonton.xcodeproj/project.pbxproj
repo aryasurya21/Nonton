@@ -177,9 +177,17 @@
 		A14554BE25624E6700FF16CA /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				A14554BF25624E7800FF16CA /* ProfileView.swift */,
+				A14554C325625DEB00FF16CA /* View */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		A14554C325625DEB00FF16CA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A14554BF25624E7800FF16CA /* ProfileView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		A1627F6C255E233900E76BEC = {
