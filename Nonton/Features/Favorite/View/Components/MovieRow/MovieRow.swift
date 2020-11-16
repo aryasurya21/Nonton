@@ -15,6 +15,7 @@ struct MovieRow: View {
         VStack {
             WebImage(url: movie.backdropURL)
                 .resizable()
+                .indicator(.activity)
                 .aspectRatio(16/9, contentMode: .fit)
             HStack(alignment: .top) {
                 Text(movie.title)

@@ -33,7 +33,7 @@ struct ContentView: View {
                     Image(systemName: "person.fill")
                     Text("Profile")
                 }
-            }.tag(1)
+            }.tag(2)
         }
     }
 }

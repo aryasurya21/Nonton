@@ -16,7 +16,7 @@ struct FavoriteView: View {
                 if self.presenter.error != nil {
                     ErrorView(errorMessage: self.presenter.error?.localizedDescription ?? "")
                 } else if self.presenter.isLoading {
-                   ActivityIndicator()
+                    ActivityIndicator()
                 } else if self.presenter.movies?.count != nil && self.presenter.movies?.count ?? 0 > 0 {
                     ScrollView(.vertical, showsIndicators: false) {
                         ForEach(self.presenter.movies!) { movie in
