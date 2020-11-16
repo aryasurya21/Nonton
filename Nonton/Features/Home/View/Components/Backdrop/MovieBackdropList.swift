@@ -16,8 +16,9 @@ struct MovieBackdropList: View {
     var body: some View {
         VStack(alignment: .leading) {
            Text(self.title)
-               .fontWeight(.bold)
-               .padding(.horizontal)
+                .font(.title)
+                .fontWeight(.bold)
+                .padding(.horizontal)
            ScrollView(.horizontal, showsIndicators: false) {
                HStack(alignment: .top, spacing: 16) {
                    ForEach(self.movies) { movie in

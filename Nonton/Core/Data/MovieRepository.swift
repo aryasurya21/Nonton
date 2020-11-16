@@ -11,6 +11,7 @@ import Combine
 protocol MovieRepositoryProtocol {
     func getMovieList(from endpoint: MovieEndPoints) -> AnyPublisher<[MovieModel], Error>
     func getMovieDetail(withID movieID: Int) -> AnyPublisher<MovieModel, Error>
+    func toggleFavoriteMovie(forID movieID: Int) -> AnyPublisher<MovieModel, Error>
 }
 
 class MovieRepository {
@@ -29,6 +30,12 @@ class MovieRepository {
 }
 
 extension MovieRepository: MovieRepositoryProtocol {
+    func toggleFavoriteMovie(forID movieID: Int) -> AnyPublisher<MovieModel, Error> {
+        return self.localInstance.toggleFavoriteMovie(withID: movieID)
+            .map { MovieMapper.mapMovieDetailEntitytoModel(movie: $0) }
+            .eraseToAnyPublisher()
+    }
+
     func getMovieDetail(withID movieID: Int) -> AnyPublisher<MovieModel, Error> {
         return self.localInstance.getMovieDetail(withID: movieID)
             .flatMap { (result) -> AnyPublisher<MovieModel, Error> in

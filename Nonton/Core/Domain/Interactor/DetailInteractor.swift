@@ -11,12 +11,18 @@ import Combine
 class DetailInteractor: DetailUseCaseProtocol {
 
     private let repository: MovieRepositoryProtocol
+    private let movieID: Int
 
-    init(repository: MovieRepositoryProtocol) {
+    init(repository: MovieRepositoryProtocol, withID movieID: Int) {
         self.repository = repository
+        self.movieID = movieID
     }
 
-    func getMovieDetail(withID movieID: Int) -> AnyPublisher<MovieModel, Error> {
-        return self.repository.getMovieDetail(withID: movieID)
+    func getMovieDetail() -> AnyPublisher<MovieModel, Error> {
+        return self.repository.getMovieDetail(withID: self.movieID)
+    }
+
+    func toggleFavoriteMovie() -> AnyPublisher<MovieModel, Error> {
+        return self.repository.toggleFavoriteMovie(forID: self.movieID)
     }
 }

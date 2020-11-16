@@ -20,5 +20,5 @@ class MovieEntity: Object {
     @objc dynamic var runtime: Int = 0
     @objc dynamic var movieCategory: String = ""
     @objc dynamic var releaseDate: String = ""
-
+    @objc dynamic var isFavorite: Bool = false
 }

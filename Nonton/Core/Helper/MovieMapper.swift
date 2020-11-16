@@ -18,6 +18,7 @@ class MovieMapper {
             entity.overview = movie.overview ?? ""
             entity.voteAverage = movie.voteAverage ?? 0.0
             entity.movieCategory = endpoint.rawValue
+            entity.isFavorite = false
             return entity
         }
     }
@@ -33,23 +34,10 @@ class MovieMapper {
                 voteAverage: movie.voteAverage,
                 runtime: movie.runtime,
                 movieCategory: endpoint.rawValue,
-                releaseDate: movie.releaseDate
+                releaseDate: movie.releaseDate,
+                isFavorite: movie.isFavorite
             )
         }
-    }
-
-    class func mapMovieDetailResponsetoModel(from movie: MovieResponse) -> MovieModel {
-        return MovieModel(
-            id: movie.id ?? 0,
-            title: movie.title ?? "",
-            backdropPath: movie.backdropPath ?? "",
-            posterPath: movie.posterPath ?? "",
-            overview: movie.overview ?? "",
-            voteAverage: movie.voteAverage ?? 0,
-            runtime: movie.runTime ?? 0,
-            movieCategory: "",
-            releaseDate: movie.releaseDate ?? ""
-        )
     }
 
     class func mapMovieDetailResponsetoEntity(movie: MovieResponse) -> MovieEntity {
@@ -62,7 +50,7 @@ class MovieMapper {
         movieEntity.overview = movie.overview ?? ""
         movieEntity.voteAverage = movie.voteAverage ?? 0
         movieEntity.releaseDate = movie.releaseDate ?? ""
-        movieEntity.movieCategory = ""
+        movieEntity.isFavorite = false
         return movieEntity
     }
 
@@ -76,7 +64,8 @@ class MovieMapper {
             voteAverage: movie.voteAverage,
             runtime: movie.runtime,
             movieCategory: movie.movieCategory,
-            releaseDate: movie.releaseDate
+            releaseDate: movie.releaseDate,
+            isFavorite: movie.isFavorite
         )
     }
 }

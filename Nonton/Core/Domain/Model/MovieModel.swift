@@ -17,6 +17,7 @@ struct MovieModel: Equatable, Identifiable {
     let runtime: Int
     let movieCategory: String
     let releaseDate: String
+    let isFavorite: Bool
 
     var posterImageURL: URL {
         return URL(string: "https://image.tmdb.org/t/p/w500/\(self.posterPath)")!
@@ -51,7 +52,6 @@ struct MovieModel: Equatable, Identifiable {
     }
 
     var formattedRating: String {
-        var averageVote = self.voteAverage
-        return "\(averageVote.rounded())"
+        return "\(self.voteAverage.rounded())"
     }
 }

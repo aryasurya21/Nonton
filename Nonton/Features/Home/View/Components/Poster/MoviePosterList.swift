@@ -24,7 +24,8 @@ struct MoviePosterList: View {
                         self.presenter.viewBuilder(movieData: movie) {
                             MoviePoster(movie: movie)
                                 .buttonStyle(PlainButtonStyle())
-                        }.padding(.leading, movie.id == self.movies.first!.id ? 16 : 0)
+                        }
+                        .padding(.leading, movie.id == self.movies.first!.id ? 16 : 0)
                         .padding(.trailing, movie.id == self.movies.last!.id ? 16 : 0)
                     }
                 }

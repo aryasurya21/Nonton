@@ -26,7 +26,25 @@ class DetailPresenter: ObservableObject {
 
     func getMovieDetail() {
         self.isLoading = true
-        self.useCase.getMovieDetail(withID: self.movieID)
+        self.useCase.getMovieDetail()
+        .receive(on: RunLoop.main)
+        .sink(receiveCompletion: { completion in
+          switch completion {
+          case .failure(let error):
+            self.error = error
+            self.isLoading = false
+          case .finished:
+            self.isLoading = false
+          }
+        }, receiveValue: { movieData in
+          self.movieData = movieData
+        })
+        .store(in: &cancellables)
+    }
+
+    func toggleFavoriteMovie() {
+        self.isLoading = true
+        self.useCase.toggleFavoriteMovie()
         .receive(on: RunLoop.main)
         .sink(receiveCompletion: { completion in
           switch completion {

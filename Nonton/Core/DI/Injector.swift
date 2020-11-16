@@ -26,7 +26,7 @@ final class Injector {
         return HomeInteractor(repository: self.injectRepository())
     }
 
-    public func injectDetailInteractor() -> DetailUseCaseProtocol {
-        return DetailInteractor(repository: self.injectRepository())
+    public func injectDetailInteractor(movieID: Int) -> DetailUseCaseProtocol {
+        return DetailInteractor(repository: self.injectRepository(), withID: movieID)
     }
 }

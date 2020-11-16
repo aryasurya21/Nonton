@@ -10,7 +10,7 @@ import SwiftUI
 
 class HomeRouter {
     func goToDetailView(for movie: MovieModel) -> some View {
-        let detailUseCase = Injector.shared.injectDetailInteractor()
+        let detailUseCase = Injector.shared.injectDetailInteractor(movieID: movie.id)
         let detailPresenter = DetailPresenter(useCase: detailUseCase, movieID: movie.id)
         return DetailView(presenter: detailPresenter)
     }

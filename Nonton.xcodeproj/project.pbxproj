@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A10C4C4225621C7A00D937FA /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10C4C4125621C7A00D937FA /* ActivityIndicator.swift */; };
 		A10D6DBE25613E7300773467 /* MovieBackdropList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10D6DBD25613E7300773467 /* MovieBackdropList.swift */; };
 		A10D6DC4256140E500773467 /* MoviePosterList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10D6DC3256140E500773467 /* MoviePosterList.swift */; };
 		A10FD702255EDA6A0066FA52 /* MovieEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10FD701255EDA6A0066FA52 /* MovieEnum.swift */; };
@@ -44,6 +45,7 @@
 /* Begin PBXFileReference section */
 		3FF48C363AC3CD886484573E /* Pods-Nonton.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nonton.debug.xcconfig"; path = "Target Support Files/Pods-Nonton/Pods-Nonton.debug.xcconfig"; sourceTree = "<group>"; };
 		4583DBE98013D5533C4C4C74 /* Pods_Nonton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nonton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A10C4C4125621C7A00D937FA /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		A10D6DBD25613E7300773467 /* MovieBackdropList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieBackdropList.swift; sourceTree = "<group>"; };
 		A10D6DC3256140E500773467 /* MoviePosterList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviePosterList.swift; sourceTree = "<group>"; };
 		A10FD701255EDA6A0066FA52 /* MovieEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieEnum.swift; sourceTree = "<group>"; };
@@ -107,6 +109,14 @@
 				E88B9731B4DD75410CE7C47A /* Pods-Nonton.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		A10C4C4025621C2B00D937FA /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				A10C4C4125621C7A00D937FA /* ActivityIndicator.swift */,
+			);
+			path = UIKit;
 			sourceTree = "<group>";
 		};
 		A1627F6C255E233900E76BEC = {
@@ -219,7 +229,6 @@
 			isa = PBXGroup;
 			children = (
 				A1C0B0BD2560F796006C2267 /* Presenter */,
-				A1C0B0BC2560F791006C2267 /* Router */,
 				A1C0B0BE2560F79F006C2267 /* View */,
 			);
 			path = Detail;
@@ -341,6 +350,7 @@
 		A1628036255E6FAC00E76BEC /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				A10C4C4025621C2B00D937FA /* UIKit */,
 				A162802C255E4B6C00E76BEC /* MovieError.swift */,
 				A1628037255E6FC100E76BEC /* MovieMapper.swift */,
 				A10FD701255EDA6A0066FA52 /* MovieEnum.swift */,
@@ -373,13 +383,6 @@
 				A1B261E4255FD10E0085117B /* MoviePoster.swift */,
 			);
 			path = Poster;
-			sourceTree = "<group>";
-		};
-		A1C0B0BC2560F791006C2267 /* Router */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Router;
 			sourceTree = "<group>";
 		};
 		A1C0B0BD2560F796006C2267 /* Presenter */ = {
@@ -535,6 +538,7 @@
 				A10D6DC4256140E500773467 /* MoviePosterList.swift in Sources */,
 				A145173B2561331300D9DD77 /* DetailInteractor.swift in Sources */,
 				A14517482561342400D9DD77 /* DetailPresenter.swift in Sources */,
+				A10C4C4225621C7A00D937FA /* ActivityIndicator.swift in Sources */,
 				A1C0B0C02560F7B5006C2267 /* DetailView.swift in Sources */,
 				A162802D255E4B6C00E76BEC /* MovieError.swift in Sources */,
 				A1627FE8255E45EA00E76BEC /* MovieResponseWrapper.swift in Sources */,

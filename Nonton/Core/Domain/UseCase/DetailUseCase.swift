@@ -9,5 +9,6 @@ import Foundation
 import Combine
 
 protocol DetailUseCaseProtocol {
-    func getMovieDetail(withID movieID: Int) -> AnyPublisher<MovieModel, Error>
+    func getMovieDetail() -> AnyPublisher<MovieModel, Error>
+    func toggleFavoriteMovie() -> AnyPublisher<MovieModel, Error>
 }
