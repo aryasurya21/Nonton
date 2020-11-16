@@ -46,6 +46,7 @@
 		A1B261E5255FD10E0085117B /* MoviePoster.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B261E4255FD10E0085117B /* MoviePoster.swift */; };
 		A1C0B0B32560F74F006C2267 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C0B0B22560F74F006C2267 /* HomeRouter.swift */; };
 		A1C0B0C02560F7B5006C2267 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C0B0BF2560F7B5006C2267 /* DetailView.swift */; };
+		A1FD9A3F2562C9F60034399D /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FD9A3E2562C9F60034399D /* ErrorView.swift */; };
 		F5C3160272B8742371B510C5 /* Pods_Nonton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4583DBE98013D5533C4C4C74 /* Pods_Nonton.framework */; };
 /* End PBXBuildFile section */
 
@@ -93,6 +94,7 @@
 		A1B261E4255FD10E0085117B /* MoviePoster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviePoster.swift; sourceTree = "<group>"; };
 		A1C0B0B22560F74F006C2267 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		A1C0B0BF2560F7B5006C2267 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		A1FD9A3E2562C9F60034399D /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		E88B9731B4DD75410CE7C47A /* Pods-Nonton.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nonton.release.xcconfig"; path = "Target Support Files/Pods-Nonton/Pods-Nonton.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -431,6 +433,7 @@
 				A162802C255E4B6C00E76BEC /* MovieError.swift */,
 				A1628037255E6FC100E76BEC /* MovieMapper.swift */,
 				A10FD701255EDA6A0066FA52 /* MovieEnum.swift */,
+				A1FD9A3E2562C9F60034399D /* ErrorView.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -618,6 +621,7 @@
 				A14554B125623C5600FF16CA /* FavoriteUseCase.swift in Sources */,
 				A10C4C4225621C7A00D937FA /* ActivityIndicator.swift in Sources */,
 				A1C0B0C02560F7B5006C2267 /* DetailView.swift in Sources */,
+				A1FD9A3F2562C9F60034399D /* ErrorView.swift in Sources */,
 				A162802D255E4B6C00E76BEC /* MovieError.swift in Sources */,
 				A1627FE8255E45EA00E76BEC /* MovieResponseWrapper.swift in Sources */,
 				A1627FDE255E42C000E76BEC /* MovieModel.swift in Sources */,

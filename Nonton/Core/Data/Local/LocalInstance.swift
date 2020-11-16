@@ -40,6 +40,7 @@ extension LocalInstance: LocalInstanceCapabilityProtocol {
                         .sorted(byKeyPath: "title", ascending: true)
                 }()
                 print(movies)
+                print(movies.count)
                 completion(.success(movies.toCustomObjects(fromType: MovieEntity.self)))
             } else {
                 completion(.failure(DatabaseError.requestFailed))
@@ -119,8 +120,20 @@ extension LocalInstance: LocalInstanceCapabilityProtocol {
         return Future<Bool, Error> { (completion) in
             if let realm = self.realm {
                 do {
+                    print("API Movies: \(movies)")
+                    let existingMovies = {
+                        realm.objects(MovieEntity.self)
+                        .toCustomObjects(fromType: MovieEntity.self)
+                    }()
+                    print("Existing movies: \(existingMovies)")
+                    let filteredMovies = movies.filter { apiMovie in
+                        return !existingMovies.contains(where: { localMovie in
+                            return apiMovie.id == localMovie.id
+                        })
+                    }
+                    print("Filtered movies: \(filteredMovies)")
                     try realm.write {
-                        for movie in movies {
+                        for movie in filteredMovies {
                             realm.add(movie)
                         }
                         completion(.success(true))
@@ -132,5 +145,20 @@ extension LocalInstance: LocalInstanceCapabilityProtocol {
                 completion(.failure(DatabaseError.requestFailed))
             }
         }.eraseToAnyPublisher()
+    }
+}
+
+extension LocalInstance {
+    func getPrevEndPoint(currentEndPoint: MovieEndPoints) -> MovieEndPoints {
+        switch currentEndPoint {
+        case .popular:
+            return .nowPlaying
+        case .topRated:
+            return .popular
+        case .upcoming:
+            return .topRated
+        case .nowPlaying:
+            return .nowPlaying
+        }
     }
 }

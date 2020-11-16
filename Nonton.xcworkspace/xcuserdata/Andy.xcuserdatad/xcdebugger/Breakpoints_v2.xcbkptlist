@@ -46,8 +46,8 @@
             filePath = "Nonton/Features/Home/View/HomeView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
             landmarkName = "body"
             landmarkType = "24">
          </BreakpointContent>
@@ -302,8 +302,8 @@
             filePath = "Nonton/Features/Home/View/HomeView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
             landmarkName = "body"
             landmarkType = "24">
          </BreakpointContent>
@@ -478,8 +478,8 @@
             filePath = "Nonton/Features/Home/View/HomeView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
             landmarkName = "body"
             landmarkType = "24">
          </BreakpointContent>
@@ -606,10 +606,10 @@
             filePath = "Nonton/Core/Helper/MovieMapper.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
-            landmarkName = "mapMovieDetailEntitytoModel(movie:)"
-            landmarkType = "7">
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "MovieMapper"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -718,8 +718,8 @@
             filePath = "Nonton/Core/Data/Local/LocalInstance.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
             landmarkName = "updateMovie(withID:newMovieData:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -786,38 +786,6 @@
             endingLineNumber = "36"
             landmarkName = "getMovieDetail()"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "E5DB2DE6-CDD4-4283-8C11-BF6B25E5E528"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Nonton/Features/Favorite/View/FavoriteView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
-            landmarkName = "body"
-            landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "7A30611D-CA1D-49DF-B630-4BCDA6FB6C06"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Nonton/Features/Favorite/View/FavoriteView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
-            landmarkName = "body"
-            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -910,8 +878,8 @@
             filePath = "Nonton/Core/Data/Local/LocalInstance.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
             landmarkName = "getFavoriteMovies()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1026,6 +994,198 @@
                   offsetFromSymbolStart = "141">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D1933611-7303-48EB-9E5D-7AD55EC0CC75"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Nonton/Core/Helper/MovieMapper.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "mapMovieDetailResponsetoEntity(movie:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6707A9CA-0AC5-4176-9475-E93530296ED2"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Nonton/Core/Data/Local/LocalInstance.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "129"
+            endingLineNumber = "129"
+            landmarkName = "addMovieList(movies:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "6707A9CA-0AC5-4176-9475-E93530296ED2 - 65dd49875840183a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 ((Swift.Result&lt;Swift.Bool, Swift.Error&gt;) -&gt; ()) -&gt; () in Nonton.LocalInstance.addMovieList(forEndPoint: Nonton.MovieEndPoints, movies: Swift.Array&lt;Nonton.MovieEntity&gt;) -&gt; Combine.AnyPublisher&lt;Swift.Bool, Swift.Error&gt;"
+                  moduleName = "Nonton"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Andy/Documents/Arya/iOS/DicodingExpert/Nonton/Nonton/Core/Data/Local/LocalInstance.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "124"
+                  endingLineNumber = "124"
+                  offsetFromSymbolStart = "1144">
+               </Location>
+               <Location
+                  uuid = "6707A9CA-0AC5-4176-9475-E93530296ED2 - dbac44be7d83ad0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "implicit closure #2 (Nonton.MovieEntity) -&gt; Swift.Bool in implicit closure #1 (Swift.Array&lt;Nonton.MovieEntity&gt;) -&gt; (Nonton.MovieEntity) -&gt; Swift.Bool in closure #1 ((Swift.Result&lt;Swift.Bool, Swift.Error&gt;) -&gt; ()) -&gt; () in Nonton.LocalInstance.addMovieList(forEndPoint: Nonton.MovieEndPoints, movies: Swift.Array&lt;Nonton.MovieEntity&gt;) -&gt; Combine.AnyPublisher&lt;Swift.Bool, Swift.Error&gt;"
+                  moduleName = "Nonton"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Andy/Documents/Arya/iOS/DicodingExpert/Nonton/Nonton/Core/Data/Local/LocalInstance.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "124"
+                  endingLineNumber = "124"
+                  offsetFromSymbolStart = "42">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "23F27D35-FF0E-47F4-A0F6-FD670B70F0BD"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Nonton/Core/Data/Local/LocalInstance.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "139"
+            endingLineNumber = "139"
+            landmarkName = "addMovieList(movies:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E41903B6-66FE-4D23-9FBB-5413D9ACBD1F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Nonton/Core/Data/Local/LocalInstance.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "135"
+            endingLineNumber = "135"
+            landmarkName = "addMovieList(movies:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "E41903B6-66FE-4D23-9FBB-5413D9ACBD1F - 68c0ce2f490f0ef4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 ((Swift.Result&lt;Swift.Bool, Swift.Error&gt;) -&gt; ()) -&gt; () in Nonton.LocalInstance.addMovieList(movies: Swift.Array&lt;Nonton.MovieEntity&gt;) -&gt; Combine.AnyPublisher&lt;Swift.Bool, Swift.Error&gt;"
+                  moduleName = "Nonton"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Andy/Documents/Arya/iOS/DicodingExpert/Nonton/Nonton/Core/Data/Local/LocalInstance.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "135"
+                  endingLineNumber = "135"
+                  offsetFromSymbolStart = "2387">
+               </Location>
+               <Location
+                  uuid = "E41903B6-66FE-4D23-9FBB-5413D9ACBD1F - c607149a02483b8c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #3 () -&gt; () in closure #1 ((Swift.Result&lt;Swift.Bool, Swift.Error&gt;) -&gt; ()) -&gt; () in Nonton.LocalInstance.addMovieList(movies: Swift.Array&lt;Nonton.MovieEntity&gt;) -&gt; Combine.AnyPublisher&lt;Swift.Bool, Swift.Error&gt;"
+                  moduleName = "Nonton"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Andy/Documents/Arya/iOS/DicodingExpert/Nonton/Nonton/Core/Data/Local/LocalInstance.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "136"
+                  endingLineNumber = "136"
+                  offsetFromSymbolStart = "183">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4581935A-13AC-4F1A-A263-3D7B8B2CE685"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Nonton/Core/Data/Local/LocalInstance.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "toggleFavoriteMovie(withID:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "4581935A-13AC-4F1A-A263-3D7B8B2CE685 - 6cc152200f476690"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 ((Swift.Result&lt;Nonton.MovieEntity, Swift.Error&gt;) -&gt; ()) -&gt; () in Nonton.LocalInstance.toggleFavoriteMovie(withID: Swift.Int) -&gt; Combine.AnyPublisher&lt;Nonton.MovieEntity, Swift.Error&gt;"
+                  moduleName = "Nonton"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Andy/Documents/Arya/iOS/DicodingExpert/Nonton/Nonton/Core/Data/Local/LocalInstance.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "57"
+                  endingLineNumber = "57"
+                  offsetFromSymbolStart = "934">
+               </Location>
+               <Location
+                  uuid = "4581935A-13AC-4F1A-A263-3D7B8B2CE685 - 6715931c46168699"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in closure #1 ((Swift.Result&lt;Nonton.MovieEntity, Swift.Error&gt;) -&gt; ()) -&gt; () in Nonton.LocalInstance.toggleFavoriteMovie(withID: Swift.Int) -&gt; Combine.AnyPublisher&lt;Nonton.MovieEntity, Swift.Error&gt;"
+                  moduleName = "Nonton"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Andy/Documents/Arya/iOS/DicodingExpert/Nonton/Nonton/Core/Data/Local/LocalInstance.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "58"
+                  endingLineNumber = "58"
+                  offsetFromSymbolStart = "20">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4B0955B3-00EC-47BA-BE16-86B0527FA1A2"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Nonton/Core/Data/Local/LocalInstance.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "toggleFavoriteMovie(withID:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

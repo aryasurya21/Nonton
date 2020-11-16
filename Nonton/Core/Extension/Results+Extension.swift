@@ -11,7 +11,7 @@ import RealmSwift
 extension Results {
     func toCustomObjects<T: Object>(fromType: T.Type) -> [T] {
         var finalResult = [T]()
-        for idx in stride(from: 0, to: self.count-1, by: 1) {
+        for idx in 0 ..< count {
             if let obj = self[idx] as? T {
                 finalResult.append(obj)
             }

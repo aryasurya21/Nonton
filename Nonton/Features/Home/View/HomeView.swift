@@ -13,7 +13,9 @@ struct HomeView: View {
 
     var body: some View {
         NavigationView {
-            if self.presenter.isLoading {
+            if self.presenter.error != nil {
+                ErrorView(errorMessage: self.presenter.error?.localizedDescription ?? "")
+            } else if self.presenter.isLoading {
                 ActivityIndicator()
             } else {
                 List {
