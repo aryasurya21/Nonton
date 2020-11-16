@@ -15,6 +15,7 @@ protocol LocalInstanceCapabilityProtocol {
     func getMovieDetail(withID movieID: Int) -> AnyPublisher<MovieEntity, Error>
     func updateMovie(withID movieID: Int, newMovieData sourceMovie: MovieEntity) -> AnyPublisher<Bool, Error>
     func toggleFavoriteMovie(withID movieID: Int) -> AnyPublisher<MovieEntity, Error>
+    func getFavoriteMovies() -> AnyPublisher<[MovieEntity], Error>
 }
 
 class LocalInstance {
@@ -30,6 +31,21 @@ class LocalInstance {
 }
 
 extension LocalInstance: LocalInstanceCapabilityProtocol {
+    func getFavoriteMovies() -> AnyPublisher<[MovieEntity], Error> {
+        return Future<[MovieEntity], Error>{ (completion) in
+            if let realm = self.realm {
+                let movies: Results<MovieEntity> = {
+                    realm.objects(MovieEntity.self)
+                        .filter("isFavorite=\(true)")
+                        .sorted(byKeyPath: "title", ascending: true)
+                }()
+                completion(.success(movies.toCustomObjects(fromType: MovieEntity.self)))
+            } else {
+                completion(.failure(DatabaseError.requestFailed))
+            }
+        }.eraseToAnyPublisher()
+    }
+    
     func toggleFavoriteMovie(withID movieID: Int) -> AnyPublisher<MovieEntity, Error> {
         return Future<MovieEntity, Error> { (completion) in
             guard let realm = self.realm, let targetMovie = realm.objects(MovieEntity.self).filter("id=\(movieID)").first else {
@@ -41,7 +57,7 @@ extension LocalInstance: LocalInstanceCapabilityProtocol {
                 }
                 completion(.success(targetMovie))
             } catch {
-                return completion(.failure(DatabaseError.invalidInstance))
+                return completion(.failure(DatabaseError.requestFailed))
             }
         }.eraseToAnyPublisher()
     }

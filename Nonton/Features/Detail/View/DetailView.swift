@@ -10,7 +10,8 @@ import SDWebImageSwiftUI
 
 struct DetailView: View {
     @ObservedObject var presenter: DetailPresenter
-
+    @State private var showPopup = false
+    
     var body: some View {
         ScrollView {
             if self.presenter.isLoading {
@@ -28,12 +29,14 @@ struct DetailView: View {
                         Spacer()
                         if let movie = self.presenter.movieData, movie.isFavorite {
                             Image(systemName: "heart.fill")
+                                .foregroundColor(Color.red)
                                 .padding()
                                 .overlay(
                                     Circle()
-                                        .stroke(Color.gray, lineWidth: 4)
+                                        .stroke(Color.gray, lineWidth: 1)
                                 ).onTapGesture {
                                     self.presenter.toggleFavoriteMovie()
+                                    self.showPopup = true
                                 }
                         } else {
                         Image(systemName: "heart")
@@ -43,6 +46,7 @@ struct DetailView: View {
                                     .stroke(Color.gray, lineWidth: 4)
                             ).onTapGesture {
                                 self.presenter.toggleFavoriteMovie()
+                                self.showPopup = true
                             }
                         }
                     }.padding()
@@ -89,7 +93,13 @@ struct DetailView: View {
         }.navigationBarTitle(self.presenter.movieData?.title ?? "Movie Detail", displayMode: .inline)
         .onAppear {
             self.presenter.getMovieDetail()
-        }
+        }.alert(isPresented: $showPopup, content: {
+            Alert(
+              title: Text("Success!"),
+                message: Text("Succesfully \(self.presenter.movieData?.isFavorite ?? false ? "favorited" : "unfavorited") this movie!"),
+              dismissButton: .default(Text("OK"))
+            )
+        })
     }
 }
 

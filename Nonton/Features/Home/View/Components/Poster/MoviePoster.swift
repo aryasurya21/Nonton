@@ -21,11 +21,10 @@ struct MoviePoster: View {
                 .cornerRadius(8)
                 .shadow(radius: 5)
                 .frame(width: 170, height: 250, alignment: .center)
-            Text(movie.title)
+            Text(movie.title.count > 20 ? String(movie.title.prefix(18))+"..." : movie.title)
                 .foregroundColor(Color.black)
                 .font(.subheadline)
                 .fontWeight(.bold)
-
         }
     }
 }

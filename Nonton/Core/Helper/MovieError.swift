@@ -10,17 +10,11 @@ import Foundation
 enum MovieError: Error, CustomNSError {
     case apiError
     case invalidEndpoint
-    case invalidResponse
-    case noData
-    case serializationError
-
+    
     var localizedDescription: String {
         switch self {
         case .apiError: return "Failed to fetch data."
         case .invalidEndpoint: return "Invalid endpoint."
-        case .invalidResponse: return "Invalud response."
-        case .noData: return "No Data."
-        case .serializationError: return "Failed to decode data."
         }
     }
 
@@ -29,7 +23,6 @@ enum MovieError: Error, CustomNSError {
     }
 }
 
-
 enum DatabaseError: Error, CustomNSError {
 
   case invalidInstance
@@ -37,7 +30,7 @@ enum DatabaseError: Error, CustomNSError {
 
   var localizedDescription: String {
     switch self {
-    case .invalidInstance: return "Database can't instance."
+    case .invalidInstance: return "Cannot instantiate the database."
     case .requestFailed: return "Your request failed."
     }
   }

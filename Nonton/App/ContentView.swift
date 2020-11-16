@@ -9,16 +9,31 @@ import SwiftUI
 
 struct ContentView: View {
     @EnvironmentObject var homePresenter: HomePresenter
-
+    @EnvironmentObject var favoritePresenter: FavoritePresenter
+    
     var body: some View {
         TabView {
-            HomeView(presenter: homePresenter)
+            HomeView(presenter: self.homePresenter)
                 .tabItem {
                     VStack {
                         Image(systemName: "house")
                         Text("Home")
                     }
                 }.tag(0)
+            FavoriteView(presenter: self.favoritePresenter)
+                .tabItem {
+                VStack {
+                    Image(systemName: "heart.fill")
+                    Text("Favorite")
+                }
+            }.tag(1)
+            FavoriteView(presenter: self.favoritePresenter)
+                .tabItem {
+                VStack {
+                    Image(systemName: "heart.fill")
+                    Text("Favorite")
+                }
+            }.tag(1)
         }
     }
 }

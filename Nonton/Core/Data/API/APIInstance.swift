@@ -35,9 +35,11 @@ extension APIInstance: APICapabilityProtocol {
                         case .success(let movie):
                             completion(.success(movie))
                         case .failure:
-                            completion(.failure(MovieError.invalidEndpoint))
+                            completion(.failure(MovieError.apiError))
                         }
                     }
+            } else {
+                completion(.failure(MovieError.invalidEndpoint))
             }
         }.eraseToAnyPublisher()
     }
@@ -53,9 +55,11 @@ extension APIInstance: APICapabilityProtocol {
                     case .success(let data):
                         completion(.success(data.results))
                     case .failure:
-                        completion(.failure(MovieError.invalidEndpoint))
+                        completion(.failure(MovieError.apiError))
                     }
                 }
+            } else {
+                return completion(.failure(MovieError.invalidEndpoint))
             }
         }.eraseToAnyPublisher()
     }

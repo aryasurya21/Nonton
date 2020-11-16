@@ -20,9 +20,10 @@ struct MovieBackdrop: View {
                 .aspectRatio(16/9, contentMode: .fit)
                 .cornerRadius(8)
                 .shadow(radius: 4)
-            Text(movie.title)
+            Text(movie.title.count > 30 ? String(movie.title.prefix(28))+"..." : movie.title)
                 .font(.subheadline)
                 .fontWeight(.bold)
+                .lineLimit(1)
         }
     }
 }
