@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ErrorView: View {
     var errorMessage: String
-    
+
     var body: some View {
         VStack {
             Text("Sorry, Something went wrong :(")
@@ -18,8 +18,8 @@ struct ErrorView: View {
                 .fontWeight(.bold)
             Image("errorLogo")
                 .resizable()
-                .frame(width: 150, height: 150, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-            
+                .frame(width: 150, height: 150, alignment: .center/*@END_MENU_TOKEN@*/)
+
         }
     }
 }

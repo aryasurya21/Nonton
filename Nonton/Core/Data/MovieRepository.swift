@@ -46,7 +46,7 @@ extension MovieRepository: MovieRepositoryProtocol {
     func getMovieDetail(withID movieID: Int) -> AnyPublisher<MovieModel, Error> {
         return self.localInstance.getMovieDetail(withID: movieID)
             .flatMap { (result) -> AnyPublisher<MovieModel, Error> in
-                print(result)
+
                 if result.runtime == 0 {
                     return self.apiInstance.getMovieDetail(withID: movieID)
                         .map { MovieMapper.mapMovieDetailResponsetoEntity(movie: $0) }
