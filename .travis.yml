@@ -1,3 +1,6 @@
 language: swift
+
+swift:
+- "5"
 osx_image: xcode12
-script: xcodebuild -workspace Nonton.xcworkspace -scheme Nonton -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
+xcodebuild -workspace {workspace}.xcworkspace -scheme {scheme} -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
