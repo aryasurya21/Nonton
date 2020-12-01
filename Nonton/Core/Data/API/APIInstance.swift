@@ -50,7 +50,9 @@ extension APIInstance: APICapabilityProtocol {
         ]
         return Future<[MovieResponse], Error> { (completion) in
             if let url = URL(string: "\(self.baseURL)/movie/\(endpoint.rawValue)") {
-                AF.request(url, method: .get, parameters: parameters).validate().responseDecodable(of: MovieResponseWrapper.self) { (response) in
+                AF.request(url, method: .get, parameters: parameters)
+                    .validate()
+                    .responseDecodable(of: MovieResponseWrapper.self) { (response) in
                     switch response.result {
                     case .success(let data):
                         completion(.success(data.results))

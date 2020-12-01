@@ -8,7 +8,6 @@
 import Foundation
 import RealmSwift
 
-
 class MovieEntity: Object {
 
     @objc dynamic var id: Int = 0

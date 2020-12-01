@@ -48,7 +48,10 @@ extension LocalInstance: LocalInstanceCapabilityProtocol {
 
     func toggleFavoriteMovie(withID movieID: Int) -> AnyPublisher<MovieEntity, Error> {
         return Future<MovieEntity, Error> { (completion) in
-            guard let realm = self.realm, let targetMovie = realm.objects(MovieEntity.self).filter("id=\(movieID)").first else {
+            guard
+                let realm = self.realm,
+                let targetMovie = realm.objects(MovieEntity.self).filter("id=\(movieID)").first
+            else {
                 return completion(.failure(DatabaseError.invalidInstance))
             }
             do {
@@ -64,7 +67,10 @@ extension LocalInstance: LocalInstanceCapabilityProtocol {
 
     func updateMovie(withID movieID: Int, newMovieData sourceMovie: MovieEntity) -> AnyPublisher<Bool, Error> {
         return Future<Bool, Error> { (completion) in
-            guard let realm = self.realm, let targetMovie = realm.objects(MovieEntity.self).filter("id=\(movieID)").first else {
+            guard
+                let realm = self.realm,
+                let targetMovie = realm.objects(MovieEntity.self).filter("id=\(movieID)").first
+            else {
                 return completion(.failure(DatabaseError.invalidInstance))
             }
             do {

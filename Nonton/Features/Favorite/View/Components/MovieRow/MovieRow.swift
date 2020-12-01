@@ -33,9 +33,3 @@ struct MovieRow: View {
         .padding()
     }
 }
-
-struct MovieRow_Previews: PreviewProvider {
-    static var previews: some View {
-        MovieRow(movie: MovieModel(id: 0, title: "Naruto", backdropPath: "https://i.pinimg.com/originals/71/73/59/71735901596a554a253359909bb39266.jpg", posterPath: "", overview: "", voteAverage: 0, runtime: 0, movieCategory: "", releaseDate: "", isFavorite: true))
-    }
-}

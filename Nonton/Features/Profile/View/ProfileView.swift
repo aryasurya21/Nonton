@@ -19,7 +19,16 @@ struct ProfileView: View {
                 .indicator(.activity)
                 .frame(width: 300, height: 300, alignment: .center).clipShape(Circle())
                 .shadow(radius: 10)
-                .overlay(Circle().stroke(Color.gray, lineWidth: 5)).listRowInsets(EdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 0))
+                .overlay(Circle()
+                            .stroke(
+                                Color.gray,
+                                lineWidth: 5
+                            )
+                ).listRowInsets(
+                    EdgeInsets(
+                        top: 10, leading: 0, bottom: 10, trailing: 0
+                    )
+                )
             Text("Arya S")
                 .font(.largeTitle)
                 .fontWeight(.bold)

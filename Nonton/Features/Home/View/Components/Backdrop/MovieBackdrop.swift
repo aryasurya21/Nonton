@@ -27,9 +27,3 @@ struct MovieBackdrop: View {
         }
     }
 }
-
-struct MovieBackdrop_Previews: PreviewProvider {
-    static var previews: some View {
-        MovieBackdrop(movie: MovieModel(id: 012345, title: "Uzumaki Saburo", backdropPath: "", posterPath: "https://i.pinimg.com/originals/71/73/59/71735901596a554a253359909bb39266.jpg", overview: "Cucu Uzumaki Narutp", voteAverage: 9.0, runtime: 2, movieCategory: "now_playing", releaseDate: "2020-10-20", isFavorite: true))
-    }
-}

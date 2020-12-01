@@ -1,0 +1,6 @@
+language: swift
+
+swift:
+- "5"
+osx_image: xcode12
+xcodebuild -workspace {workspace}.xcworkspace -scheme {scheme} -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO

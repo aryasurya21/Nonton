@@ -96,7 +96,12 @@ struct DetailView: View {
         }.alert(isPresented: $showPopup, content: {
             Alert(
               title: Text("Success!"),
-                message: Text("Succesfully \(self.presenter.movieData?.isFavorite ?? false ? "favorited" : "unfavorited") this movie!"),
+                message: Text(
+                    """
+                        Succesfully
+                        \(self.presenter.movieData?.isFavorite ?? false ? "favorited" : "unfavorited")
+                        this movie!
+                    """),
               dismissButton: .default(Text("OK"))
             )
         })
