@@ -22,18 +22,18 @@ struct ContentView: View {
                 }.tag(0)
             FavoriteView(presenter: self.favoritePresenter)
                 .tabItem {
-                VStack {
-                    Image(systemName: "heart.fill")
-                    Text("Favorite")
-                }
-            }.tag(1)
+                    VStack {
+                        Image(systemName: "heart.fill")
+                        Text("Favorite")
+                    }
+                }.tag(1)
             ProfileView()
                 .tabItem {
-                VStack {
-                    Image(systemName: "person.fill")
-                    Text("Profile")
-                }
-            }.tag(2)
+                    VStack {
+                        Image(systemName: "person.fill")
+                        Text("Profile")
+                    }
+                }.tag(2)
         }
     }
 }
