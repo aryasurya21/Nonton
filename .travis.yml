@@ -7,7 +7,7 @@ language: swift
 osx_image: xcode11.6
 xcode_workspace: Nonton.xcworkspace # path to your xcworkspace file
 xcode_scheme: Nonton
-xcode_destination: platform=iOS Simulator,OS=13.6,name=iPhone 8
+xcode_destination: platform=iOS Simulator,OS=14,name=iPhone X
 script:
  - swiftlint
- - xcodebuild test -workspace 'Nonton.xcworkspace' -scheme 'Nonton' -destination 'platform=iOS Simulator,OS=13.6,name=iPhone 8'
+ - xcodebuild -workspace 'Nonton.xcworkspace' -scheme 'Nonton' -destination 'platform=iOS Simulator,OS=14,name=iPhone X'
