@@ -604,7 +604,6 @@ struct ObjectChangeCallbackWrapper {
             (__bridge void *)self, _name, _previousValue, _value];
 }
 @end
-
 @interface RLMObjectNotificationToken : RLMNotificationToken
 @end
 

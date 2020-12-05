@@ -176,7 +176,6 @@ public:
     class SyncTransactReporter {
     public:
         virtual void report_sync_transact(VersionID old_version, VersionID new_version) = 0;
-
     protected:
         ~SyncTransactReporter() {}
     };
@@ -522,7 +521,6 @@ public:
     {
         return m_message;
     }
-
 private:
     const char* m_message;
 };

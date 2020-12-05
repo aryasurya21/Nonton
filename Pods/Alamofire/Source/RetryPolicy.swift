@@ -64,7 +64,6 @@ open class RetryPolicy: RequestInterceptor {
         // process.
         //   - [Enabled] The other process could release the background session.
         .backgroundSessionInUseByAnotherProcess,
-
         // [System] The shared container identifier of the URL session configuration is needed but has not been set.
         //   - [Disabled] Cannot change at runtime.
         // .backgroundSessionRequiresSharedContainer,
@@ -85,7 +84,6 @@ open class RetryPolicy: RequestInterceptor {
         // simultaneous phone and data communication (EDGE or GPRS).
         //   - [Enabled] Phone call could be ended to allow request to recover.
         .callIsActive,
-
         // [Client] An asynchronous load has been canceled.
         //   - [Disabled] Request was cancelled by the client.
         // .cancelled,
@@ -97,7 +95,6 @@ open class RetryPolicy: RequestInterceptor {
         // [Network] An attempt to connect to a host failed.
         //   - [Enabled] Server or DNS lookup could recover during retry.
         .cannotConnectToHost,
-
         // [File System] A download task couldn’t create the downloaded file on disk because of an I/O failure.
         //   - [Disabled] File system error is unlikely to recover with retry.
         // .cannotCreateFile,
@@ -197,7 +194,6 @@ open class RetryPolicy: RequestInterceptor {
         // cannot be established automatically.
         //   - [Enabled] A network connection could be established during retry.
         .notConnectedToInternet,
-
         // [Resource] A redirect was specified by way of server response code, but the server did not accompany this
         // code with a redirect URL.
         //   - [Disabled] The redirect URL is unlikely to be supplied during a retry.
@@ -228,7 +224,6 @@ open class RetryPolicy: RequestInterceptor {
         // [Security] A server certificate is not yet valid.
         //   - [Enabled] The server certificate could become valid within the retry window.
         .serverCertificateNotYetValid,
-
         // [Security] A server certificate was signed by a root server that isn’t trusted.
         //   - [Disabled] The server certificate is unlikely to become trusted within the retry window.
         // .serverCertificateUntrusted,

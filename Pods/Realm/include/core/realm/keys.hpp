@@ -28,7 +28,6 @@ namespace realm {
 
 struct TableKey {
     static constexpr uint32_t null_value = uint32_t(-1) >> 1; // free top bit
-
     constexpr TableKey() noexcept
         : value(null_value)
     {

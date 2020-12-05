@@ -14,7 +14,6 @@ struct ChangesetParser {
     /// FIXME: Consider using std::error_code instead of throwing exceptions on
     /// parse errors.
     void parse(_impl::NoCopyInputStream&, InstructionHandler&);
-
 private:
     struct State;
 };

@@ -30,7 +30,6 @@
 #import "RLMResults_Private.hpp"
 #import "RLMSchema_Private.h"
 #import "RLMUtil.hpp"
-
 #import "results.hpp"
 #import "property.hpp"
 

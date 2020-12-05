@@ -637,7 +637,6 @@ public:
     {
         return m_stream->lowest_layer().m_desc;
     }
-
 protected:
     Stream* m_stream;
     std::error_code m_error_code;
@@ -661,7 +660,6 @@ public:
         // Note: do_recycle_and_execute() commits suicide.
         do_recycle_and_execute<H>(orphaned, m_handler, ec); // Throws
     }
-
 private:
     H m_handler;
 };
@@ -706,7 +704,6 @@ public:
     {
         return m_stream->lowest_layer().m_desc;
     }
-
 protected:
     Stream* m_stream;
     std::error_code m_error_code;
@@ -730,7 +727,6 @@ public:
         // Note: do_recycle_and_execute() commits suicide.
         do_recycle_and_execute<H>(orphaned, m_handler, ec); // Throws
     }
-
 private:
     H m_handler;
 };

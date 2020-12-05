@@ -1826,7 +1826,6 @@ Query operator==(bool left, const Subexpr2<R>& right)
 {
     return create<Equal>(left, right);
 }
-
 template <class R>
 Query operator>=(double left, const Subexpr2<R>& right)
 {

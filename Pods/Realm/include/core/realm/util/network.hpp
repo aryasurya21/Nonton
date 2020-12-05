@@ -1994,7 +1994,6 @@ public:
     {
         m_resolver = nullptr;
     }
-
 protected:
     Resolver* m_resolver;
     Resolver::Query m_query;
@@ -2027,7 +2026,6 @@ public:
     {
         m_timer = nullptr;
     }
-
 protected:
     DeadlineTimer* m_timer;
     clock::time_point m_expiration_time;
@@ -2059,7 +2057,6 @@ public:
         REALM_ASSERT(m_service);
         Service::trigger_exec(*m_service, *this);
     }
-
 protected:
     Impl* m_service;
 };
@@ -2081,7 +2078,6 @@ public:
     {
         REALM_ASSERT(false); // Never called
     }
-
 protected:
     Impl& m_service;
 };
@@ -2115,7 +2111,6 @@ public:
             throw;
         }
     }
-
 private:
     H m_handler;
 };
@@ -2399,7 +2394,6 @@ public:
     {
         return m_stream->lowest_layer().m_desc;
     }
-
 protected:
     S* m_stream;
     std::error_code m_error_code;
@@ -2476,7 +2470,6 @@ public:
             REALM_ASSERT(n < size);
         }
     }
-
 protected:
     const bool m_is_read_some;
     char* const m_begin;    // May be dangling after cancellation
@@ -2555,7 +2548,6 @@ public:
             REALM_ASSERT(n < size);
         }
     }
-
 protected:
     const bool m_is_write_some;
     const char* const m_begin;    // May be dangling after cancellation
@@ -2631,7 +2623,6 @@ public:
                 return want;
         }
     }
-
 protected:
     ReadAheadBuffer& m_read_ahead_buffer; // May be dangling after cancellation
     char* const m_begin;                  // May be dangling after cancellation
@@ -2665,7 +2656,6 @@ public:
         s.template do_recycle_and_execute<H>(orphaned, s.m_handler, ec,
                                              num_bytes_transferred); // Throws
     }
-
 private:
     H m_handler;
 };
@@ -2695,7 +2685,6 @@ public:
         s.template do_recycle_and_execute<H>(orphaned, s.m_handler, ec,
                                              num_bytes_transferred); // Throws
     }
-
 private:
     H m_handler;
 };
@@ -2727,7 +2716,6 @@ public:
         s.template do_recycle_and_execute<H>(orphaned, s.m_handler, ec,
                                              num_bytes_transferred); // Throws
     }
-
 private:
     H m_handler;
 };
@@ -2907,7 +2895,6 @@ public:
         // Note: do_recycle_and_execute() commits suicide.
         do_recycle_and_execute<H>(orphaned, m_handler, ec, std::move(m_endpoints)); // Throws
     }
-
 private:
     H m_handler;
 };
@@ -3163,7 +3150,6 @@ public:
     {
         return m_socket->m_desc;
     }
-
 protected:
     Socket* m_socket;
     std::error_code m_error_code;
@@ -3187,7 +3173,6 @@ public:
         // Note: do_recycle_and_execute() commits suicide.
         do_recycle_and_execute<H>(orphaned, m_handler, ec); // Throws
     }
-
 private:
     H m_handler;
 };
@@ -3469,7 +3454,6 @@ public:
     {
         return m_acceptor->m_desc;
     }
-
 protected:
     Acceptor* m_acceptor;
     Socket& m_socket;           // May be dangling after cancellation
@@ -3496,7 +3480,6 @@ public:
         // Note: do_recycle_and_execute() commits suicide.
         do_recycle_and_execute<H>(orphaned, m_handler, ec); // Throws
     }
-
 private:
     H m_handler;
 };
@@ -3602,7 +3585,6 @@ public:
         // Note: do_recycle_and_execute() commits suicide.
         do_recycle_and_execute<H>(orphaned, m_handler, ec); // Throws
     }
-
 private:
     H m_handler;
 };
@@ -3654,7 +3636,6 @@ public:
             m_handler(); // Throws
         }
     }
-
 private:
     H m_handler;
 };

@@ -35,7 +35,6 @@
 #endif
 
 using namespace realm;
-
 using Level = realm::util::Logger::Level;
 
 namespace {

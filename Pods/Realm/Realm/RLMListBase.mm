@@ -153,5 +153,4 @@
     _realm = nil;
     return _results;
 }
-
 @end

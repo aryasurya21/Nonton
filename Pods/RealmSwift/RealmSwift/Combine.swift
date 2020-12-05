@@ -569,7 +569,6 @@ public enum RealmPublishers {
         public typealias Output = Void
 
         private let realm: Realm
-
         internal init(_ realm: Realm) {
             self.realm = realm
         }

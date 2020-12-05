@@ -400,7 +400,6 @@ util::Optional<SyncUserMetadata> SyncMetadataManager::get_or_make_user_metadata(
             return none;
         }
     }
-
     return SyncUserMetadata(schema, std::move(realm), std::move(*row));
 }
 
