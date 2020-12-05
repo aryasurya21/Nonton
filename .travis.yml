@@ -5,7 +5,7 @@ install:
   - pod install
 language: swift
 osx_image: xcode12
-xcode_workspace: Nonton.xcworkspace # path to your xcworkspace file
+xcode_workspace: Nonton.xcworkspace
 xcode_scheme: Nonton
 xcode_destination: platform=iOS Simulator,OS=14.0,name=iPhone 11 Pro
 script:

@@ -98,10 +98,11 @@ struct DetailView: View {
               title: Text("Success!"),
                 message: Text(
                     """
-                        Succesfully
-                        \(self.presenter.movieData?.isFavorite ?? false ? "favorited" : "unfavorited")
-                        this movie!
-                    """),
+                    Succesfully
+                    \(presenter.movieData?.isFavorite ?? false ? "favorited" : "unfavorited")
+                    this movie!
+                    """
+                ),
               dismissButton: .default(Text("OK"))
             )
         })
